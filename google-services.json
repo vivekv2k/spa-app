@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "802973073470",
+    "project_id": "spa-ceylon-2",
+    "storage_bucket": "spa-ceylon-2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:802973073470:android:9489f287b921a621cc116f",
+        "android_client_info": {
+          "package_name": "com.vvkalanka.scapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZI1sT6g5hpXWV4JutV-JEmBYuRqzV9GI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

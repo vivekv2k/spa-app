@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "sc-app",
+    "name": "Spa Ceylon Staff App",
     "slug": "sc-app",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -8,29 +8,79 @@
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/images/splash.png",
+      "image": "./assets/images/splash-sp.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.vvkalanka.scapp",
+      "infoPlist": {
+        "UIBackgroundModes": ["remote-notification"],
+        "NSUserTrackingUsageDescription": "This app uses notifications to alert you about updates and messages.",
+        "NSUserNotificationUsageDescription": "We need permission to send you notifications for app updates, reminders, and alerts."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "VIBRATE",
+        "RECEIVE_BOOT_COMPLETED",
+        "SCHEDULE_EXACT_ALARM",
+        "android.permission.ACCESS_NOTIFICATION_POLICY",
+        "android.permission.INTERNET",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "INTERNET"
+      ],
+
+      "package": "com.vvkalanka.scapp",
+      "googleServicesFile": "./google-services.json"
     },
     "web": {
       "bundler": "metro",
       "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
+    "extra": {
+      "eas": {
+        "projectId": "bd15d55a-108e-43ea-801f-ba6c1b5557fe"
+      }
+    },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/SpaceMono-Regular.ttf",
+            "./assets/fonts/NotoSans.ttf"
+          ]
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/notif-icon.png",
+          "color": "#bbfc14",
+          "sounds": [
+            "./assets/sounds/emergency.wav"
+          ]
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "owner": "vvkalanka"
   }
 }
